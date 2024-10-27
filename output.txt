@@ -1,11 +1,12 @@
 Enter the size of the array
 Enter the array
-Enter the number you want to find index of
-mid is smaller than num
-mid 4 start 5 end 9
-mid is smaller than num
-mid 7 start 8 end 9
-mid is smaller than num
-mid 8 start 9 end 9
-found the index
-The number is at index 9
+3 
+5 
+7 
+9 
+12 
+18 
+21 
+23 
+32 
+34 
