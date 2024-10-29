@@ -1,12 +1,22 @@
 Enter the size of the array
-Enter the array
-3 
-5 
-7 
-9 
-12 
-18 
-21 
-23 
-32 
-34 
+25
+Digit found: S2
+Digit found: S2
+Digit found: S8
+Operator found: /
+Pushing: num1:8 num2: 2 result 4
+Digit found: S3
+Operator found: +
+Pushing: num1:3 num2: 4 result 7
+Digit found: S3
+Digit found: S2
+Operator found: +
+Pushing: num1:2 num2: 3 result 5
+Digit found: S6
+Operator found: -
+Pushing: num1:6 num2: 5 result 1
+Operator found: *
+Pushing: num1:1 num2: 7 result 7
+Operator found: -
+Pushing: num1:7 num2: 2 result 5
+5
