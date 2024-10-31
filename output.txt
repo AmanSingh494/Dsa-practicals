@@ -1,3 +1,10 @@
-Enter the size of the Stack
-front 1
-The front element is 21
+2 
+1 
+4 
+9 
+12 
+After deletion
+1 
+4 
+9 
+0x166eb8
