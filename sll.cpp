@@ -18,17 +18,18 @@ class SinglyLinkedList
     Node *head;
 
 public:
-    SinglyLinkedList(){
+    SinglyLinkedList()
+    {
         head = nullptr;
     };
-    void insertAtBeggining(int data);
+    void insertAtBeginning(int data);
     void insertAtPosition(int data, int pos);
-    void deleteFromBeggining();
+    void deleteFromBeginning();
     void deleteFromPosition(int pos);
-    Node* searchOnValue(int val);
+    Node *searchOnValue(int val);
     void display();
 };
-void SinglyLinkedList::insertAtBeggining(int data)
+void SinglyLinkedList::insertAtBeginning(int data)
 {
     Node *newNode = new Node(data);
     newNode->next = head;
@@ -40,7 +41,7 @@ void SinglyLinkedList::insertAtPosition(int data, int pos)
     Node *newNode = new Node(data);
     Node *nodeBefore = head;
     if (pos == 0)
-        insertAtBeggining(data);
+        insertAtBeginning(data);
     for (int i = 0; i < pos - 1; i++)
     {
         if (nodeBefore->next == nullptr)
@@ -56,46 +57,58 @@ void SinglyLinkedList::insertAtPosition(int data, int pos)
     return;
 };
 
-void SinglyLinkedList::deleteFromBeggining(){
-    if (head == nullptr) {
-            cout << "List is empty" << endl;
-            return;
-        }
-        Node* temp = head;
-        head = head->next;
-        delete temp;
-};
-    void SinglyLinkedList::deleteFromPosition(int pos){
-        if (head == nullptr) {
+void SinglyLinkedList::deleteFromBeginning()
+{
+    if (head == nullptr)
+    {
         cout << "List is empty" << endl;
         return;
     }
-        if(pos == 0) deleteFromBeggining();
-        Node *beforePos = head;
-        for(int i = 0;i<pos-1;i++){
-            if (beforePos->next == nullptr) {
+    Node *temp = head;
+    head = head->next;
+    delete temp;
+};
+void SinglyLinkedList::deleteFromPosition(int pos)
+{
+    if (head == nullptr)
+    {
+        cout << "List is empty" << endl;
+        return;
+    }
+    if (pos == 0)
+        deleteFromBeginning();
+    Node *beforePos = head;
+    for (int i = 0; i < pos - 1; i++)
+    {
+        if (beforePos->next == nullptr)
+        {
             cout << "Position out of bounds" << endl;
             return;
         }
-            beforePos = beforePos->next;
-        }
-        Node *RipNode=beforePos->next;
-        if (RipNode == nullptr) {
-            cout << "Position out of bounds" << endl;
-            return;
-        }
-        beforePos->next = RipNode->next;
-        delete RipNode;
-    };
+        beforePos = beforePos->next;
+    }
+    Node *RipNode = beforePos->next;
+    if (RipNode == nullptr)
+    {
+        cout << "Position out of bounds" << endl;
+        return;
+    }
+    beforePos->next = RipNode->next;
+    delete RipNode;
+};
 
-Node* SinglyLinkedList::searchOnValue(int val){
-    if (head == nullptr) {
+Node *SinglyLinkedList::searchOnValue(int val)
+{
+    if (head == nullptr)
+    {
         cout << "List is empty" << endl;
         return nullptr;
     }
     Node *current = head;
-    while(current != nullptr){
-        if(current->data == val) return current;
+    while (current != nullptr)
+    {
+        if (current->data == val)
+            return current;
         current = current->next;
     }
     cout << "Element not found" << endl;
@@ -115,14 +128,14 @@ void SinglyLinkedList::display()
 int main()
 {
     SinglyLinkedList ll;
-    ll.insertAtBeggining(12);
-    ll.insertAtBeggining(9);
-    ll.insertAtBeggining(4);
-    ll.insertAtBeggining(2);
-    ll.insertAtPosition(1,1);
+    ll.insertAtBeginning(12);
+    ll.insertAtBeginning(9);
+    ll.insertAtBeginning(4);
+    ll.insertAtBeginning(2);
+    ll.insertAtPosition(1, 1);
     ll.display();
-    cout << "After deletion"<<endl;
-    ll.deleteFromBeggining();
+    cout << "After deletion" << endl;
+    ll.deleteFromBeginning();
     ll.deleteFromPosition(3);
     ll.display();
     cout << ll.searchOnValue(1) << endl;

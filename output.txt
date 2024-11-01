@@ -1,10 +1,7 @@
-2 
-1 
-4 
 9 
 12 
-After deletion
-1 
 4 
-9 
-0x166eb8
+2 
+After deletion
+12 
+4 
