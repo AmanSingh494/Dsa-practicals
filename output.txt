@@ -1,7 +1,10 @@
-9 
-12 
 4 
+12 
+9 
 2 
 After deletion
-12 
 4 
+12 
+9 
+Element not found
+0
